@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .form-container {
+        height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .form-field{
+        display: flex;
+    }
+    .label{
+        width: 100px;
+    }
+    </style>
+<body>
+    <h1>Social Network Registration</h1>
+    <form action="submit" method="POST" enctype="multipart/form-data">
+      <div class="form-container">
+        <div class="form-field">
+          <div class="label"><label for="fullName">Full Name:</label></div>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-field">
+            <div class="label"><label for="email">Email:</label></div>          
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <div class="label"><label for="about">About:</label></div>
+          <textarea id="about" name="about" rows="3" cols="50"></textarea>
+        </div>
+        <div class="form-field">
+          <div class="label"><label for="picture">Profile Picture:</label></div>
+          <input type="file" id="picture" name="picture">
+        </div>
+        <div class="form-field">
+          <input type="submit" value="Submit">
+        </div>
+      </div>
+    </form>
+  
+</body>
+</html>
