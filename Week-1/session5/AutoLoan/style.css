@@ -1,0 +1,58 @@
+h1{
+    text-align: center;
+    font-size: 16px;
+    color: #444444;
+}
+.container{
+    width: 100%;
+    text-align: center;
+    font-family: "Roboto", "Helvetica", "sans-serif";
+}
+.offer{
+    display: inline-block;
+    width: 400px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.offerTitle{
+    height: 50px;
+    width: 100%;
+    background-color: #00b3b3;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.offerContents{
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+table{
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    font-size: 12px;
+    color: #777777;
+}
+td{
+    font-size: 12px;
+    color: #444444;
+    font-weight: lighter;
+}
+th,td{
+    border-bottom: 1px solid #f1f1f1;
+    text-align: left;
+    height: 50px;
+    padding: 4px;
+}
+.finalValue{
+    font-weight: bold;
+    color: #2222ff;
+}
+
