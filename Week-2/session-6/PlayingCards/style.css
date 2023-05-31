@@ -1,0 +1,62 @@
+.table {
+    background: linear-gradient(forestgreen, darkgreen);
+    height: 465px;
+    width: 35%;
+  }
+  
+  .card {
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+    width: 180px;
+    height: 265px;
+    background-color: white;
+  }
+  
+  .cardTop {
+    position: absolute;
+    left: 85px;
+    top: 100px;
+    z-index: 2;
+    font-size: 55px;
+  }
+  
+  .cardBottom {
+    position: absolute;
+    left: 240px;
+    top: 120px;
+    z-index: 1;
+    font-size: 55px;
+    color: red;
+  }
+  
+  .topLeft {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+  }
+  
+  .bottomRight {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+  }
+
+  .cardBlack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardRed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .spade{
+    font-size: 55px;
+  } */
+
+  /* .heart{
+    font-size: 55px;
+    color: red;
+  } */
