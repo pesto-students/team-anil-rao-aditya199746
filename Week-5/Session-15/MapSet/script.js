@@ -3,13 +3,13 @@ let productViews = new WeakMap();
 let cartItems = new WeakSet();
 
 function incrementProductViews(productId) {
-    const key = { id: productId };
-    if (productViews.has(key)) {
-        const viewCount = productViews.get(key);
-        productViews.set(key, viewCount + 1);
+   
+    if (productViews.has(productId)) {
+        const viewCount = productViews.get(productId);
+        productViews.set(productId, viewCount + 1);
         return `Product ID ${productId} is viewed for the first time`
       } else {
-        productViews.set(key, 1);
+        productViews.set(productId, 1);
         return `Product ID ${productId} is viewed for the second time`
       }
 }
@@ -25,5 +25,5 @@ function addToCart(productId) {
     }
   }
 
-  incrementProductViews(123)
-incrementProductViews(123)
+  incrementProductViews({id:123})
+incrementProductViews({id:123})
