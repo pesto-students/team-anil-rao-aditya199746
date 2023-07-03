@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+}
+#board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 10px;
+    justify-content: center;
+
+    >div{
+        border: 1px solid lightblue;
+        font-size: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+
+  .x{
+    color: red;
+  }
+  .o{
+    color: blue;
+  }
