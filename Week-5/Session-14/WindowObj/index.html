@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function displayWindowProperties() {
+            console.log('User Agent: ', window.navigator.userAgent);
+
+            console.log('Screen Width: ', window.screen.width);
+            console.log('Screen Height: ', window.screen.height);
+
+            console.log('Current URL: ', window.location.href);
+            console.log('Current Path: ', window.location.pathname);
+
+            window.sessionStorage.setItem('sessionData', 'This is session data');
+            console.log('Session Data: ', window.sessionStorage.getItem('sessionData'));
+
+            window.localStorage.setItem('localData', 'This is local data');
+            console.log('Local Data: ', window.localStorage.getItem('localData'));
+        }
+
+        // Call the displayWindowProperties() function when the page loads
+        window.addEventListener('load', displayWindowProperties);
+    </script>
+</body>
+
+</html>
