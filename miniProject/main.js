@@ -1,6 +1,6 @@
 const API_ENDPOINT =
   "https://api.api-ninjas.com/v1/quotes?category=";
-const ACCESS_TOKEN = "0yJwR//msmp10YWV2llUNg==kAEH5d0eB3ufL0z5";
+// const ACCESS_TOKEN = "";
 
 
 const topicInput=document.querySelector("#topic-input")
@@ -19,7 +19,7 @@ const getQuote=async (topicVal)=>{
         method:"GET",
         headers:{
             "Content-Type":"application/json",
-            'X-Api-Key': ACCESS_TOKEN
+            'X-Api-Key': "0yJwR//msmp10YWV2llUNg==kAEH5d0eB3ufL0z5"
         },
         limit:5
     }
