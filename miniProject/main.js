@@ -1,3 +1,5 @@
+require('dotenv').config();
+const apikey= process.env.ACCESS_TOKEN;
 const API_ENDPOINT =
   "https://api.api-ninjas.com/v1/quotes?category=";
 // const ACCESS_TOKEN = "";
@@ -19,7 +21,7 @@ const getQuote=async (topicVal)=>{
         method:"GET",
         headers:{
             "Content-Type":"application/json",
-            'X-Api-Key': "0yJwR//msmp10YWV2llUNg==kAEH5d0eB3ufL0z5"
+            'X-Api-Key': apikey
         },
         limit:5
     }
