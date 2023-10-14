@@ -1,0 +1,12 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.light {
+  background-color: white;
+}
+.dark {
+  background-color: black;
+  color: white;
+}

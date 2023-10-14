@@ -1,0 +1,17 @@
+.book-form {
+  margin-top: 20px;
+}
+
+.book-form h2 {
+  font-size: 1.2rem;
+}
+
+.book-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-form input {
+  margin-bottom: 10px;
+  padding: 5px;
+}

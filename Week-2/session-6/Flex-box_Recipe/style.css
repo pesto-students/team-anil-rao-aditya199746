@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+.title{
+    display: flex;
+    align-items: baseline;
+}
+.summary{
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.ingredients,.directions{
+    flex-grow: 1;
+    flex-basis: 45%;
+}
+.related-content{
+    flex-grow: 1;
+    flex-basis: 20%;
+}
+
+.summary{
+    >div{
+        border: 1px solid black;
+            background-color: bisque;
+        >div{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    }
+}
