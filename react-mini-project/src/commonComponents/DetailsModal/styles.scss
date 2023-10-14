@@ -1,0 +1,75 @@
+.modal-container {
+  overflow: scroll;
+
+  .modal-inner {
+    width: 1000px;
+    height: 80vh;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(235, 237, 244);
+    box-shadow: 8px 8px 16px 0px rgba(74, 80, 82, 0.4);
+    border-radius: 4px;
+    padding: 0px 40px 70px;
+    margin: 80px auto 0;
+    outline: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    margin-top: 0px;
+    padding: 0px 40px 40px;
+
+    .section-header {
+      position: sticky;
+      top: 0px;
+      z-index: 3;
+      background: #fff;
+      padding: 20px 0px;
+
+      .section-name {
+        height: 100%;
+        color: rgb(49, 49, 49);
+        font-size: 21px;
+        font-family: var(--gilroy-semibold) !important;
+        font-weight: 600;
+        letter-spacing: 0px;
+        overflow-wrap: anywhere;
+        position: relative;
+
+        .sub-header {
+          font-size: 12px;
+          font-family: var(--gilroy-regular);
+          margin: 5px 0px;
+        }
+
+        .heading-underline {
+          width: 24px;
+          height: 2px;
+          background: rgb(255, 94, 0);
+          border-radius: 1px;
+          margin-top: 12px;
+        }
+      }
+
+      .close-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+      }
+    }
+
+    .modal-content {
+      padding-bottom: 20px;
+      width: 100%;
+      height: 85%;
+
+      .modal-card {
+        width: auto;
+      }
+    }
+  }
+}

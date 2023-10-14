@@ -1,0 +1,13 @@
+  .search-container{
+    width: 250px;
+    height: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    .search-button{
+      height: 100%;
+      width: 25px;
+      background-color:lightgoldenrodyellow;
+      cursor: pointer;
+    }
+  }
