@@ -1,0 +1,17 @@
+.products-conainer{
+  padding: 0 24px;
+  h1{
+    margin-bottom: 0;
+  }
+  .products-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card-container{
+      width: 400px;
+      height: 400px;
+      padding: 5px;
+      margin-top: 20px;
+    }
+  }
+}
