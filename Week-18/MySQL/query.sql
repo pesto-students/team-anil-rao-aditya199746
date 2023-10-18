@@ -1,0 +1,47 @@
+use warehouse;
+-- Find the item that has the minimum weight.
+SELECT * from items where WEIGHT=(select MIN(WEIGHT) from items);
+
+-- Find the different warehouses in Pune.
+SELECT DISTINCT WNAME
+FROM WAREHOUSES
+WHERE LOCATION = 'Pune';
+
+-- Find the details of items ordered by a customer named "Mr. Patil".
+
+SELECT I.ITEMNO, I.DESCRIPTION, O.ORDERED_QUANTITY
+FROM ITEMS AS I
+JOIN ORDERS_ITEMS AS O ON I.ITEMNO = O.ITEM_ITEMNO
+JOIN ORDERS AS ORD ON O.ORDER_ONO = ORD.ONO
+JOIN CUSTOMER AS C ON ORD.ONO = C.CNO
+WHERE C.CNAME = 'Mr. Patil';
+
+-- 4. Find a Warehouse that has the maximum number of stores.
+SELECT WNAME
+FROM WAREHOUSES
+WHERE WID = (
+    SELECT WID
+    FROM (
+        SELECT WAREHOUSES.WID, COUNT(STORES.SID) AS STORE_COUNT
+        FROM WAREHOUSES
+        JOIN STORES ON WAREHOUSES.WID = STORES.SID
+        GROUP BY WAREHOUSES.WID
+        ORDER BY STORE_COUNT DESC
+        LIMIT 1
+    ) AS sub
+);
+
+-- 5. Find an item that is ordered for a minimum number of times.
+SELECT I.ITEMNO, I.DESCRIPTION
+FROM ITEMS AS I
+LEFT JOIN ORDERS_ITEMS AS O ON I.ITEMNO = O.ITEM_ITEMNO
+GROUP BY I.ITEMNO, I.DESCRIPTION
+ORDER BY COUNT(O.ORDER_ONO) ASC
+LIMIT 1;
+
+-- 6. Find the detailed orders given by each customer.
+SELECT C.CNO, C.CNAME, O.ONO, O.ODATE, I.ITEMNO, I.DESCRIPTION, OI.ORDERED_QUANTITY
+FROM CUSTOMER AS C
+LEFT JOIN ORDERS AS O ON C.CNO = O.ONO
+LEFT JOIN ORDERS_ITEMS AS OI ON O.ONO = OI.ORDER_ONO
+LEFT JOIN ITEMS AS I ON OI.ITEM_ITEMNO = I.ITEMNO;

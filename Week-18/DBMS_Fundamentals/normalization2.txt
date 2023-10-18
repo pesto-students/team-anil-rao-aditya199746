@@ -1,0 +1,59 @@
+First Normal Form (1NF)
+Ensure that each column contains atomic values. There should be no repeating groups. The given table is already in 1NF, as it contains only single values in each cell.
+
+
+Second Normal Form (2NF)
+To achieve 2NF, we need to identify the primary key(s) and eliminate partial dependencies. In this case, the primary key could be {Employee ID, Project ID} as it uniquely identifies each row.
+
+Table 1: Employees
+
+Employee ID (Primary Key)
+Employee Name
+Department
+Table 2: Projects
+
+Project ID (Primary Key)
+Project Name
+Table 3: Employee-Project
+
+Employee ID (Foreign Key)
+Project ID (Foreign Key)
+Start Date
+End Date
+Salary
+The tables are now in 2NF.
+
+
+Third Normal Form (3NF)
+To achieve 3NF, we need to remove transitive dependencies. In the "Employees" table, there is a transitive dependency between Employee ID and Department through Employee Name. We can create a new table for Departments and move the Employee-Department relationship there.
+
+Table 4: Departments
+Department (Primary Key)
+Employee ID (Foreign Key)
+Now, Table 1 (Employees) is in 3NF.
+
+
+There are no multi-valued dependencies in this table, so there's no need to go beyond 3NF in this case. Therefore, we don't need a 4NF in this normalization.
+
+The final normalized tables are:
+
+Table 1: Employees
+
+Employee ID (Primary Key)
+Employee Name
+Table 2: Projects
+
+Project ID (Primary Key)
+Project Name
+Table 3: Employee-Project
+
+Employee ID (Foreign Key)
+Project ID (Foreign Key)
+Start Date
+End Date
+Salary
+Table 4: Departments
+
+Department (Primary Key)
+Employee ID (Foreign Key)
+The tables are now in 3NF, and data is organized efficiently without redundancy and data anomalies.
