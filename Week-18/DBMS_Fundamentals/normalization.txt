@@ -1,0 +1,42 @@
+First Normal Form (1NF)
+To achieve 1NF, ensure that each column contains atomic values, and there are no repeating groups. The provided table is already in 1NF as it contains only single values in each cell, and there are no repeating groups.
+
+
+To achieve 2NF, we need to identify the primary key(s) and eliminate partial dependencies. In this case, we can identify the primary key as a combination of {Book ID, ISBN} since both uniquely identify each row. We also need to create separate tables for each entity and its attributes.
+
+Table 1: Books
+
+Book ID (Primary Key)
+Title
+Author
+Genre
+Table 2: Publishers
+
+Publisher (Primary Key)
+ISBN (Primary Key)
+Table 1 (Books) is now in 2NF, and Table 2 (Publishers) is in 2NF. ISBN in Table 2 is part of the composite primary key.
+
+
+To achieve 3NF, we need to remove transitive dependencies. In Table 1 (Books), there is a transitive dependency between Publisher and ISBN through the Title. We can create a new table for Publishers and move the Publisher-ISBN relationship there.
+
+Table 3: Book Publishers
+ISBN (Primary Key)
+Publisher (Foreign Key)
+Now, Table 1 (Books) is in 3NF.
+
+The final normalized tables are:
+
+Table 1: Books
+
+Book ID (Primary Key)
+Title
+Author
+Genre
+Table 2: Publishers
+
+Publisher (Primary Key)
+Table 3: Book Publishers
+
+ISBN (Primary Key)
+Publisher (Foreign Key)
+The tables are now in 3NF, and data is organized efficiently without redundancy and data anomalies.
