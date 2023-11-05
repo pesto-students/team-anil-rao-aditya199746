@@ -1,17 +1,16 @@
-const mysql=require("mysql2")
-const db=mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"ANSU1997vivo@2",
-    database:"nodeWealth",
+const mysql = require("mysql2")
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "nodeWealth",
 })
 
-db.connect((err)=>{
-    if(err)
-    {
+db.connect((err) => {
+    if (err) {
         throw err;
     }
     console.log("conn successful")
 })
 
-module.exports=db;
+module.exports = db;
